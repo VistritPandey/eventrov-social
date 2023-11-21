@@ -6,6 +6,7 @@ import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { ImImage } from "react-icons/im";
 import { VscSend } from "react-icons/vsc";
+import Header from './Header';
 
 function ImageUpload({ username, updateFeedImage }) {
   const [image, setImage] = useState(null);
@@ -62,6 +63,8 @@ function ImageUpload({ username, updateFeedImage }) {
   };
 
   return (
+    <>
+    <Header />
     <div className=" w-full p-4 border border-gray-300 rounded mt-4 flex flex-col items-center">
       <progress className="w-full mb-2" value={progress} max="100" />
       <div className="flex items-center w-full mb-2 text-black">
@@ -71,7 +74,7 @@ function ImageUpload({ username, updateFeedImage }) {
           onChange={(event) => setCaption(event.target.value)}
           value={caption}
           className="flex-grow border border-gray-300 rounded text-black mr-2"
-        />
+          />
         <label className="text-yellow-500 p-4 cursor-pointer">
           <ImImage size={20} />
           <input type="file" onChange={handleChange} className="hidden" />
@@ -81,6 +84,7 @@ function ImageUpload({ username, updateFeedImage }) {
         </button>
       </div>
     </div>
+    </>
   );
 }
 
