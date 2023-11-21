@@ -22,7 +22,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Header />
+        
         <Routes>
           <Route path="/about" element={<About />} />
           <Route path="/feature" element={<Feature />} />
@@ -35,7 +35,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/booking" element={<Booking />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Login />} />
         </Routes>
         <Footer />
       </div>
