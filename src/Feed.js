@@ -94,8 +94,8 @@ function Feed() {
   };
 
   return (
-    <div className="feed">
-      <Dashboard />
+    <div className="feed p-8">
+      {/*<Dashboard /> */}
       <div className="feed__inputContainer">
         {/*
         <div className="feed__input">
