@@ -130,7 +130,7 @@ const Profile = () => {
   return (
     <>
     <Header />
-    <div className="p-16 mx-auto p-4">
+    <div className="p-32 mx-auto p-4">
       <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
         <div className="mb-6">
           <h1 className="text-2xl text-center font-bold">My Profile</h1>
